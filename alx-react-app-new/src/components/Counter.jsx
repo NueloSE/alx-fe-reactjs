@@ -20,9 +20,9 @@ function Counter () {
         <p>Current Count: {count}</p>
 
         <div style={{display : "flex", justifyContent: 'center', gap:"2rem"}}>
-          <button onClick={increaseCount}>increase</button>
-          <button onClick={decreaseCount}>decrease</button>
-          <button onClick={resetCount}>reset</button>
+          <button onClick={increaseCount}>Increment</button>
+          <button onClick={decreaseCount}>Decrement</button>
+          <button onClick={resetCount}>Reset</button>
         </div>
       </div>
     );
