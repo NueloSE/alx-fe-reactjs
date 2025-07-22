@@ -24,13 +24,28 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   place-items: top;
   min-width: 320px;
   min-height: 100vh;
-  text-align: center;
+  /* text-align: center; */
   
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.no-decore {
+  li {
+    list-style: none;
+  }
 }
 
 .w-800 {

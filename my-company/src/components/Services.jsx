@@ -1,8 +1,8 @@
 function Services() {
   return (
-    <div style={{ padding: "20px" ,minWidth:"800px"}}>
+    <div className="center" style={{ padding: "20px" ,minWidth:"800px"}}>
       <h1>Our Services</h1>
-      <ul>
+      <ul className="no-decore">
         <li>Technology Consulting</li>
         <li>Market Analysis</li>
         <li>Product Development</li>
