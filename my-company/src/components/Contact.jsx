@@ -11,10 +11,16 @@ function Contact() {
     setFormData({...formData, [e.target.name]: [e.target.value]});
   }
 
+  const handleSubmit = (e) =>{
+    e.preventDefault()
+    alert(`${formData.name} with email: ${formData.email} submitted: ${formData.message}`);
+    setFormData({name: '', email: '', message: ''})
+  }
+
   return (
     <div style={{ padding: "20px" }}>
       <h1>Contact Us</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
