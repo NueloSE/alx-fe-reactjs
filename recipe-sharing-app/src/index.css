@@ -5,12 +5,21 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* background-color: #242424; */
+ 
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* body {
+   background-image: url('../bgImg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: -20rem ;
+} */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
@@ -22,17 +31,15 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+
+  color: #535bf2;
+}
+
+h2 {
+  text-align: center;
 }
 
 button {
@@ -45,6 +52,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin-block-start: 1rem;
 }
 button:hover {
   border-color: #646cff;
@@ -54,15 +62,89 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.static {
+  width: 100vw;
+  padding: 1rem;
+  background-color: aliceblue;
+}
+
+.flex-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-col label {
+  margin-block-start: 1rem;
+}
+
+.space-edge {
+  margin-inline: 5rem;
+}
+
+.footer {
+  color: #535bf2;
+  text-align: center;
+}
+
+.main-content {
+  height: calc(100vh - 7rem);
+  place-content: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.recipe {
+  background-color: aliceblue;
+  color: #1a1a1a;
+  padding: 2rem;
+  border-radius: .5rem;
+  margin: 1rem;
+}
+
+.input-field {
+  padding: .5rem;
+  border-radius: .5rem;
+}
+
+.center {
+  text-align: center;
+
+}
+
+
+.description {
+  width: 500px;
+  margin: 2rem auto;
+  line-height: 2rem;
+  font-size: x-large;
+
+  font-weight: bold;
+
+}
+
+.primary-btn {
+  background-color:#646cff;
+}
+
+.delete-btn {
+  background-color: rgb(249, 82, 82);
+  color: #1a1a1a;
+}
+
+.update-btn {
+  background-color: #535bf2;
+}
+
+.details {
+  background-color: #535bf2;
+  padding: .5rem;
+  border-radius: .5rem;
+  width: 500px;
 }

@@ -1,4 +1,4 @@
-import useRecipeStore from "../store/Store";
+import useRecipeStore from "./recipeStore";
 import { useState } from "react";
 
 
@@ -18,18 +18,39 @@ function AddRecipeForm () {
     
     
     return (
-        <form onSubmit={handleSubmit}>
+      <div className="main-content">
+        <h2>Share Your Recipe</h2>
+        <form onSubmit={handleSubmit} className="flex-col recipe">
+          <label htmlFor="title" >Recipe Title </label>
+          <input
+            id="title"
+            type="text"
+            value={recipeTitle}
+            placeholder="Enter Recipe Title"
+            onChange={(e) => {
+              setTitle(e.target.value);
+            }}
+            className="input-field"
+          /> 
 
-            <label htmlFor="title">Recipe Title</label>
-            <input id="title" type="text" value={recipeTitle} placeholder="Enter Recipe Title"  onChange={(e) => {setTitle(e.target.value)}}/>
-
-            <label htmlFor="description">Recipe Description</label>
-            <textarea id="description" name="description" value={recipeDescription} onChange={(e) => {setRecipeDescription(e.target.value)}}></textarea>
-
-            <button onClick={handleSubmit}>Add Recipe</button>
-
+          <label htmlFor="description">Recipe Description</label>
+          <textarea
+            id="description"
+            name="description"
+            value={recipeDescription}
+            onChange={(e) => {
+              setRecipeDescription(e.target.value);
+            }}
+            placeholder="Detailed description of Recipe"
+            className="input-field"
+            rows={10} cols={50}
+          ></textarea>
+          
+            {/* add file input for image of food recipe */}
+          <button onClick={handleSubmit}>Add Recipe</button>
         </form>
-    )
+      </div>
+    );
 }
 
 export default AddRecipeForm;
