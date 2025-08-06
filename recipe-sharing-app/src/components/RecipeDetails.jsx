@@ -1,8 +1,8 @@
 import useRecipeStore from "./recipeStore";
 import { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
-import EditRecipe from "./EditRecipe";
-import DeleteRecipe from "./DeleteRecipe";
+import EditRecipe from "./EditRecipeForm";
+import DeleteRecipe from "./DeleteRecipeButton";
 
 function RecipeDetails() {
   const recipeDetail = useLocation();
