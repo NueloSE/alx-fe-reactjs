@@ -1,7 +1,7 @@
 import RecipeList from "./components/RecipeList";
 import AddRecipeForm from "./components/AddRecipeForm";
 import RecipeDetails from "./components/RecipeDetails";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter  } from "react-router-dom";
 import Navbar from "./components/NavLink";
 import Footer from "./components/Footer";
 import "./index.css";
@@ -9,16 +9,18 @@ import HomePage from "./components/HomePage";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/list" element={<RecipeList />} />
-        <Route path="/details" element={<RecipeDetails />} />
-        <Route path="/add" element={<AddRecipeForm />} />
-      </Routes>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div>
+        <Navbar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/list" element={<RecipeList />} />
+            <Route path="/details" element={<RecipeDetails />} />
+            <Route path="/add" element={<AddRecipeForm />} />
+          </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
