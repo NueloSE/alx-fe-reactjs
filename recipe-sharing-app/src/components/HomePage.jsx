@@ -9,6 +9,7 @@ function HomePage() {
         the world. Join our community and spice up your kitchen!
       </p>
 
+
       <Link to="/list">
         <button className="primary-btn">Explore Recipes</button>
       </Link>

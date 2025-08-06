@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SearchBar from "./SearchBar";
 
 function Navbar () {
     return (
@@ -13,6 +14,9 @@ function Navbar () {
             </li>
             <li>
               <Link to="/list">View Recipes</Link>
+            </li>
+            <li>
+                <SearchBar />
             </li>
           </ul>
         </ul>

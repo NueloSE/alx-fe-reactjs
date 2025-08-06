@@ -2,6 +2,20 @@ import { create } from "zustand";
 
 const useRecipeStore = create((set) => ({
   recipes: JSON.parse(localStorage.getItem("recipes") || "[]"),
+  searchTerm: '',
+  setSearchTerm: function (term) {
+    set({searchTerm: term});
+  },
+  filteredRecipes: [],
+  filterRecipes: function () {
+    set((state) => {
+      let searchedRecipes = state.recipes
+      searchedRecipes = searchedRecipes.filter((recipe) => (
+        recipe.title.toLowerCase().includes(state.searchTerm.toLowerCase())
+      ))
+      return {filteredRecipes: searchedRecipes}
+    })
+  },
   addRecipe: function (newRecipe) {
     set((state) => {
       let newRecipes = [...state.recipes, newRecipe];
