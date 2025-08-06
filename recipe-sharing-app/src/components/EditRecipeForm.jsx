@@ -10,8 +10,8 @@ function EditRecipe ({ recipe }) {
     const [updateDescription, setUpdateDescription] = useState("");
     const navigate = useNavigate();
 
-    function update(e) {
-      e.preventDefault();
+    function update(event) {
+      event.preventDefault();
       if (updateDescription || updateTitle) {
         updateRecipe(recipe.id, {
           title: updateTitle,
