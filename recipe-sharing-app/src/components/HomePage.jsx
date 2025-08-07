@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import FavouritesList from "./FavouritesList";
+import FavouritesList from "./FavoritesList";
 import RecommendationsList from "./RecommendationsList";
 
 function HomePage() {
