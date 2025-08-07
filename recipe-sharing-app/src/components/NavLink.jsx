@@ -13,7 +13,7 @@ function Navbar () {
               <Link to="/add">Add Recipes</Link>
             </li>
             <li>
-              <Link to="/list">View Recipes</Link>
+              <Link to="/all">View Recipes</Link>
             </li>
             <li>
                 <SearchBar />

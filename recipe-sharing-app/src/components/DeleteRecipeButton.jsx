@@ -9,6 +9,7 @@ function DeleteRecipe ({recipeId}) {
 
     function deleteFn(id) {
       deleteRecipe(id);
+      alert('Deleted Successfully')
       navigate("/list");
     }
 

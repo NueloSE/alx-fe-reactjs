@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
+import FavouritesList from "./FavouritesList";
+import RecommendationsList from "./RecommendationsList";
+
 function HomePage() {
+
+    
   return (
-    <div className="main-content center">
+    <div className="pad-y center">
       <h1>Welcome to Recipe Haven</h1>
       <img src="/images/bgImg.jpeg" alt="" style={{width:'400px', marginTop:'1rem'}}/>
       <p className="description">
@@ -10,9 +15,12 @@ function HomePage() {
       </p>
 
 
-      <Link to="/list">
+      <Link to="/all">
         <button className="primary-btn">Explore Recipes</button>
       </Link>
+
+      <FavouritesList />
+      <RecommendationsList /> 
     </div>
   );
 }
