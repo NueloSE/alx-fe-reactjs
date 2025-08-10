@@ -15,6 +15,7 @@ function Search() {
   }
   useEffect(() => {
     console.log("wait first");
+    // map &&
   }, [userData]);
 
   return (
