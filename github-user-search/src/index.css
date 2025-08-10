@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -25,9 +28,9 @@ a:hover {
 }
 
 body {
-  margin: 0 ;
+  margin: 0;
   display: flex;
-  color: #24292E;
+  color: #24292e;
   justify-content: center;
   text-align: center;
   min-width: 320px;
@@ -40,8 +43,8 @@ body {
   position: fixed;
   top: 120px;
   right: 20px;
-  opacity: 0.1; 
-  pointer-events: none; 
+  opacity: 0.1;
+  pointer-events: none;
 }
 
 h1 {
@@ -49,7 +52,8 @@ h1 {
   line-height: 1.1;
 }
 
-button, .button {
+button,
+.button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -63,11 +67,11 @@ button, .button {
 }
 
 .advanced-btn {
-  background-color: #28A745;
+  background-color: #28a745;
 }
 
 .basic-btn {
-  background-color: #0366D6;
+  background-color: #0366d6;
 }
 
 button:hover {
@@ -82,7 +86,6 @@ img {
   border-radius: 100%;
   width: 50%;
   margin: 4rem auto;
-
 }
 
 .space-x {
@@ -101,7 +104,6 @@ img {
   background-color: #c9d0f9;
   padding: 2rem;
   border-radius: 2rem;
-
 }
 
 .card-title {
@@ -115,8 +117,7 @@ img {
   gap: 2rem;
 }
 
-
-#root{
+#root {
   place-content: center;
 }
 
