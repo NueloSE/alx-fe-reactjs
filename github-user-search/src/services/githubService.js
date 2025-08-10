@@ -8,6 +8,7 @@ async function fetchUserData(...querys) {
         url = `https://api.github.com/users/${params}`;
     } else {
         querys.map(query => {
+            // concatinate location and minRepos
             for (let [key, value] of Object.entries(query)) {
                 console.log(key, value)
                 params += `${key}:${value}+`
