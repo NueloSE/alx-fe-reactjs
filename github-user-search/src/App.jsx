@@ -1,16 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
 import Search from "./components/Search";
+import AdvancedSearch from "./components/AdvancedSearch";
 
 function App() {
   return (
-    <BrowserRouter>
-      <p>header</p>
+    <BrowserRouter >
 
       <Routes>
-        <Route path="/" element="" />
+        <Route path="/" element={<Home />} />
+        <Route path="/search" element={<Search />}/>
+        <Route path="/advanced" element={<AdvancedSearch/>} />
       </Routes>
-      <Search />
-      <p>footer</p>
+      
     </BrowserRouter>
   );
 }
