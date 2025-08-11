@@ -1,7 +1,5 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -117,14 +115,22 @@ img {
   gap: 2rem;
 }
 
-#root {
-  place-content: center;
+table {
+  width: 800px;
+  tr {
+    padding: 2rem;
+  }
 }
 
 .table-img {
   border-radius: 0;
   width: 100px;
 }
+
+#root {
+  place-content: center;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {

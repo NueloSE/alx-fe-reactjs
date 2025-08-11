@@ -14,7 +14,6 @@ function Search() {
     setUsername("");
   }
   useEffect(() => {
-    console.log("wait first");
     // map && location
   }, [userData]);
 

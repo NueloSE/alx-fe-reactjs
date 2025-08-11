@@ -28,7 +28,10 @@ function AdvancedSearch() {
           <h3 className="text-4xl font-extrabold">Search Criteria</h3>
           <div>
             <div className="flex flex-col pt-8">
-              <label htmlFor="location" className="font-extrabold text-3xl text-left">
+              <label
+                htmlFor="location"
+                className="font-extrabold text-3xl text-left"
+              >
                 Location:
               </label>
               <input
@@ -102,15 +105,15 @@ function AdvancedSearch() {
         </div>
       ) : userData.status === 404 ? (
         <div>
-          <p> Looks like we cant find the user</p>
+          <p className="pb-4"> Looks like we cant find the user</p>
           <Link to="/advanced" className="button">
             Advanced Search
           </Link>
         </div>
       ) : (
         <div>
-          <p>Loading ...</p>
-          <Link to="/advanced" className="button">
+          <p className="pb-4">Loading ...</p>
+          <Link to="/" className="button">
             Advanced Search
           </Link>
         </div>
