@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -115,7 +114,6 @@ img {
   gap: 2rem;
 }
 
-
 .table-img {
   border-radius: 0;
   width: 100px;
@@ -125,7 +123,7 @@ img {
   place-content: center;
 }
 
-  tr:not(:first-child) {
+tr:not(:first-child) {
   border-top: 1px solid #5ba7ff;
 }
 
@@ -152,18 +150,16 @@ th {
   }
 
   .nav-btn {
-      height: fit-content;
-      position: sticky;
-      top: 0;
-      width: fit-content;
-      padding-block: 1.5rem;
-      margin-block-start: 1rem ;
-    }
+    height: fit-content;
+    position: sticky;
+    top: 0;
+    width: fit-content;
+    padding-block: 1.5rem;
+    margin-block-start: 1rem;
+  }
 }
 
-@media (width < 470px ) {
-  
-
+@media (width < 470px) {
   body {
     overflow-x: hidden;
   }
@@ -173,15 +169,14 @@ th {
   }
 
   th {
-    font-size: .5rem;
+    font-size: 0.5rem;
     width: 10px;
   }
-  
+
   td {
     max-width: 10px;
-    font-size: .5rem;
+    font-size: 0.5rem;
   }
-  
 }
 
 @media (prefers-color-scheme: light) {
