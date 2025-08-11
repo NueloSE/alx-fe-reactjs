@@ -2,8 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import fetchUserData from "../services/githubService";
 
-
-
 function AdvancedSearch() {
   const [location, setLocation] = useState("");
   const [repoNumber, setRepoNumber] = useState("");
@@ -70,21 +68,20 @@ function AdvancedSearch() {
           </div>
         </form>
       ) : userData.status === 200 ? (
-        <div className="flex  ">
+        <div className="request-page">
           <button
             onClick={() => setUserData({})}
-            className="max-w-fit m-auto fixed left-0 mt-2 ml-2"
+            className="sticky top-0 w-full nav-btn"
           >
-            Advanced <br />
-            Search
+            Advanced Search
           </button>
-          <table className="ml-16 mt-2 ">
+          <table className="m-auto mt-4 max-w-[200px]">
             <thead>
-              <tr >
-                <th className="rounded-tl-[0.7rem] rounded-bl-[0.7rem]">S/N</th>
+              <tr>
+                <th className=" rounded-tl-[0.7rem] rounded-bl-[0.7rem]">SN</th>
                 <th>USERNAME</th>
                 <th>IMAGE</th>
-                <th className="rounded-tr-[0.7rem] rounded-br-[0.7rem]">GITHUB URL</th>
+                <th className="rounded-tr-[0.7rem] rounded-br-[0.7rem]">URL</th>
               </tr>
             </thead>
             <tbody>

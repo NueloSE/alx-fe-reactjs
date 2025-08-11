@@ -64,6 +64,8 @@ button,
   color: #c9d0f9;
 }
 
+
+
 .advanced-btn {
   background-color: #28a745;
 }
@@ -115,12 +117,6 @@ img {
   gap: 2rem;
 }
 
-table {
-  width: 800px;
-  tr {
-    padding: 2rem;
-  }
-}
 
 .table-img {
   border-radius: 0;
@@ -132,13 +128,64 @@ table {
   
 }
 
-
+  tr:not(:first-child) {
+  border-top: 1px solid #5ba7ff;
+}
 
 th {
   position: sticky;
-  top: 0;
+  top: 2.8rem;
   padding: 1.5rem;
   background-color: #5ba7ff;
+}
+
+@media (width > 700px) {
+  table {
+    max-width: 850px;
+  }
+
+  th {
+    position: sticky;
+    top: 0;
+  }
+
+  .request-page {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .nav-btn {
+      height: fit-content;
+      position: sticky;
+      top: 0;
+      width: fit-content;
+      padding-block: 1.5rem;
+      margin-block-start: 1rem ;
+    }
+}
+
+@media (width < 470px ) {
+  
+
+  body {
+
+    overflow-x: hidden;
+  }
+  .request-page {
+    max-width: 300px;
+    /* background-color: red; */
+  }
+
+  th {
+    font-size: .5rem;
+    width: 10px;
+  }
+  
+  td {
+    max-width: 10px;
+    font-size: .5rem;
+  }
+  
 }
 
 
