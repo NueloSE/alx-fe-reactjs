@@ -70,14 +70,21 @@ function AdvancedSearch() {
           </div>
         </form>
       ) : userData.status === 200 ? (
-        <div className="flex flex-col ">
-          <table>
+        <div className="flex  ">
+          <button
+            onClick={() => setUserData({})}
+            className="max-w-fit m-auto fixed left-0 mt-2 ml-2"
+          >
+            Advanced <br />
+            Search
+          </button>
+          <table className="ml-16 mt-2 ">
             <thead>
-              <tr>
-                <th>S/N</th>
+              <tr >
+                <th className="rounded-tl-[0.7rem] rounded-bl-[0.7rem]">S/N</th>
                 <th>USERNAME</th>
                 <th>IMAGE</th>
-                <th>GITHUB URL</th>
+                <th className="rounded-tr-[0.7rem] rounded-br-[0.7rem]">GITHUB URL</th>
               </tr>
             </thead>
             <tbody>
@@ -99,8 +106,6 @@ function AdvancedSearch() {
               ))}
             </tbody>
           </table>
-
-          <button onClick={() => setUserData({})} className="max-w-fit m-auto">Advanced Search</button>
         </div>
       ) : userData.status === 404 ? (
         <div>

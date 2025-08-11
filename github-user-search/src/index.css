@@ -129,6 +129,16 @@ table {
 
 #root {
   place-content: center;
+  
+}
+
+
+
+th {
+  position: sticky;
+  top: 0;
+  padding: 1.5rem;
+  background-color: #5ba7ff;
 }
 
 

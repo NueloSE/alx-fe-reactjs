@@ -23,7 +23,7 @@ function Search() {
     const timer = setTimeout(() => {
       setDisplayError(false);
       return () => clearTimeout(timer);
-    }, 2000);
+    }, 3000);
   }, [displayError]);
 
   return (
@@ -51,8 +51,8 @@ function Search() {
               />
               {displayError ? (
                 <div>
-                  <p className="bg-gray-400 p-4 rounded-md text-red-800 font-bold mb-1.5">
-                    Username cant be blank
+                  <p className="text-gray-400 p-4 rounded-md bg-red-800 font-bold mb-1.5">
+                    Username can't be blank
                   </p>
                 </div>
               ) : (

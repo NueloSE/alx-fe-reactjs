@@ -3,7 +3,7 @@ import Footer from "./Footer";
 function Home() {
   return (
     <div className="p-[1rem]">
-      <div className="text-[1.5rem] h-[70vh] place-content-center ">
+      <div className="text-[1.5rem] h-[70vh] mb-[4rem] place-content-center ">
         <img
           src="/public/images/backdrop.png"
           alt="GitHub Octocat"
