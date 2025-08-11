@@ -31,7 +31,7 @@ function Home() {
         <div className="row-flex">
           <div className="search-card">
             <h3 className="card-title">Basic Search</h3>
-            <p className="text-justify py-7 text-lg/7">
+            <p id="basic" className="text-justify py-7 text-lg/7">
               Effortlessly retrieve essential details for any GitHub user.
               Simply enter a username to access their profile name, avatar
               image, and direct links to their repositories. Ideal for quick
@@ -44,7 +44,7 @@ function Home() {
 
           <div className="search-card">
             <h3 className="card-title">Advanced Search</h3>
-            <p className="text-justify py-4 text-lg/7">
+            <p id="advanced" className="text-justify py-4 text-lg/7">
               Unlock powerful querying capabilities beyond single users. Specify
               parameters like languages, topics, stars, or keywords to generate
               a curated list of matching repositories from across GitHub.

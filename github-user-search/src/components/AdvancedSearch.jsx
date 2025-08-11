@@ -1,20 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import fetchUserData from "../services/githubService";
+
+
 
 function AdvancedSearch() {
   const [location, setLocation] = useState("");
   const [repoNumber, setRepoNumber] = useState("");
-    const [userData, setUserData] = useState({});
+  const [userData, setUserData] = useState({});
 
-  async function handleSubmit (event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    setUserData(await fetchUserData({location: location}, {repo: `>${repoNumber}`}));
-    setLocation(''); setRepoNumber('');
-
-  } 
-
-  useEffect(() => console.log('wait'),[userData])
+    setUserData(
+      await fetchUserData({ location: location }, { repo: `>${repoNumber}` })
+    );
+    setLocation("");
+    setRepoNumber("");
+  }
 
   return (
     <div>
@@ -59,7 +61,7 @@ function AdvancedSearch() {
             </div>
           </div>
           <div className="flex justify-center gap-4 ">
-            <Link className="button" to="/">
+            <Link className="button" to="/#advanced">
               Back
             </Link>
             <button className="advanced-btn" type="submit">
@@ -78,7 +80,6 @@ function AdvancedSearch() {
                 <th>GITHUB URL</th>
               </tr>
             </thead>
-            {console.log(userData.data.items)}
             <tbody>
               {userData.data.items.map((user, index) => (
                 <tr key={user.login}>
@@ -99,23 +100,20 @@ function AdvancedSearch() {
             </tbody>
           </table>
 
-          <Link className="button" to="/">
-            Advanced Search
-          </Link>
+          <button onClick={() => setUserData({})} className="max-w-fit m-auto">Advanced Search</button>
         </div>
       ) : userData.status === 404 ? (
         <div>
-          <p className="pb-4"> Looks like we cant find the user</p>
-          <Link to="/advanced" className="button">
-            Advanced Search
-          </Link>
+          <p className="bg-gray-400 p-4 rounded-md text-red-800 font-bold mb-1.5">
+            {" "}
+            Looks like we cant find the user
+          </p>
+          <button onClick={() => setUserData({})}>Advanced Search</button>
         </div>
       ) : (
         <div>
           <p className="pb-4">Loading ...</p>
-          <Link to="/" className="button">
-            Advanced Search
-          </Link>
+          <button onClick={() => setUserData({})}>Advanced Search</button>
         </div>
       )}
     </div>
