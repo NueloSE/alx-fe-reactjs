@@ -5,7 +5,7 @@ function Home() {
     <div className="p-[1rem]">
       <div className="text-[1.5rem]  mb-[8rem] place-content-center ">
         <img
-          src="/public/images/backdrop.png"
+          src="/images/backdrop.png"
           alt="GitHub Octocat"
           className="octocat w-[600px]"
         />

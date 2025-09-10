@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<Search />}/>
         <Route path="/advanced" element={<AdvancedSearch/>} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     
     </BrowserRouter>
