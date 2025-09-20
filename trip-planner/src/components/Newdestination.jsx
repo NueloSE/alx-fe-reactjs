@@ -16,11 +16,12 @@ function Newdestination({ onAddLocation }) {
       id: new Date().getTime(),
       location,
       days,
-      budget, visited: false
+      budget,
+      visited: false,
     };
 
-    onAddLocation(newLocation)
-    setOpenAddForm(false)
+    onAddLocation(newLocation);
+    setOpenAddForm(false);
 
     setBudget("");
     setLocation("");
@@ -109,7 +110,7 @@ function Newdestination({ onAddLocation }) {
                 <Button btnStyle="btn-action">
                   <span className="flex gap-4 items-center">
                     <FaPlus />
-                    Add Description
+                    Add 
                   </span>
                 </Button>
               </div>
