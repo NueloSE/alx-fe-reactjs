@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-sm: 420px;
+  --breakpoint-md: 768px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #333;
+  @apply bg-sky-50/30
+}
+
+@layer base {
+  input {
+    @apply focus:outline-1 focus:outline-sky-200 border-slate-300 bg-slate-300/20 rounded-sm p-2
+  }
+
+  label {
+    @apply mt-4
+  }
+}
+
+@layer components {
+  .btn-action {
+    @apply bg-linear-to-r from-sky-500 to-purple-500 cursor-pointer text-white
+  }
+
+  .btn-primary {
+    @apply border border-slate-400 cursor-pointer
+  }
+
+  .filter {
+    @apply px-16 py-2 rounded-lg flex  gap-2 items-center 
+  }
+
+  .count{
+    @apply bg-gray-300  rounded-xl px-2  
+  }
+.summary-box {
+  @apply flex flex-col  items-center gap-4 py-4 px-8 rounded-xl bg-purple-50 w-40
+}
+  
+
+}
+
+@layer utilities {
+  .text-gradient {
+
+    @apply text-transparent bg-clip-text bg-linear-to-r from-sky-500 via-violet-600 to-purple-500
+
+    
+  }
+}
